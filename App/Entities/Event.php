@@ -15,7 +15,7 @@ final class Event
         return $this->id;
     }
 
-    public function setId(int $id): Event
+    public function setId(int $id): self
     {
         $this->id = $id;
         return $this;
@@ -26,7 +26,7 @@ final class Event
         return $this->title;
     }
 
-    public function setTitle(string $title): Event
+    public function setTitle(string $title): self
     {
         $this->title = $title;
         return $this;
@@ -37,7 +37,7 @@ final class Event
         return $this->date_event;
     }
 
-    public function setDateEvent(string $date_event): Event
+    public function setDateEvent(string $date_event): self
     {
         $this->date_event = $date_event;
         return $this;
@@ -48,7 +48,7 @@ final class Event
         return $this->hour_event;
     }
 
-    public function setHourEvent(string $hour_event): Event
+    public function setHourEvent(string $hour_event): self
     {
         $this->hour_event = $hour_event;
         return $this;
@@ -59,7 +59,7 @@ final class Event
         return $this->desc;
     }
 
-    public function setDesc(string $desc): Event
+    public function setDesc(string $desc): self
     {
         $this->desc = $desc;
         return $this;

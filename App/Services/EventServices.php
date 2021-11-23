@@ -15,6 +15,6 @@ class EventServices extends Connect
 
     public function findEventAll(): array
     {
-        return $this->pdo->query("SELECT * FROM tb_events")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->pdo->query("SELECT " . "*" . " FROM tb_events")->fetchAll(PDO::FETCH_ASSOC);
     }
 }

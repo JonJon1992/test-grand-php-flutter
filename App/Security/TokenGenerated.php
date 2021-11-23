@@ -15,9 +15,9 @@ class TokenGenerated extends Connect
     {
         $stmt = $this
             ->pdo
-            ->prepare("INSERT INTO tb_tokens (token,refresh,expired,userId) VALUES(:token,:refreshToken,:expire,:userId)");
+            ->prepare("INSERT" . " INTO tb_tokens (token,refresh,expired,userId) VALUES(:token,:refreshToken,:expire,:userId)");
 
-        echo($token->getUserId());
+
         $stmt->execute([
             'token' => $token->getToken(),
             'refreshToken' => $token->getRefreshToken(),

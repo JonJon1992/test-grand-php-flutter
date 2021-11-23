@@ -6,5 +6,5 @@ use Tuupola\Middleware\JwtAuthentication;
 
 function jwtAuthToken(): JwtAuthentication
 {
-    return new JwtAuthentication(['secret' => getenv('SECRET_JWT'), 'attribute' => 'jwt']);
+    return new JwtAuthentication(["header" => "Authorization", "secret" => getenv('SECRET_JWT'), "attribute" => "jwt"]);
 }

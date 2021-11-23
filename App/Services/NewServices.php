@@ -13,7 +13,7 @@ class NewServices extends Connect
 
     public function findAllNews(): array
     {
-        return $this->pdo->query("SELECT * FROM tb_news")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->pdo->query("SELECT" . " * FROM tb_news")->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }

@@ -11,7 +11,7 @@ function configuration(): \Slim\Container
 {
     $settings = [
         "settings" => [
-            'displayErrorDetails' => true
+            'displayErrorDetails' => false
         ]
     ];
     $container = new \Slim\Container($settings);

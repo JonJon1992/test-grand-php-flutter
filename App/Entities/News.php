@@ -15,7 +15,8 @@ final class News
         return $this->id;
     }
 
-    public function setId(int $id): News
+    public function setId(int $id): self
+    
     {
         $this->id = $id;
         return $this;
@@ -49,7 +50,7 @@ final class News
     }
 
 
-    public function setDate(string $date): News
+    public function setDate(string $date): self
     {
         $this->date = $date;
         return $this;

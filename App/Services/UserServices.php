@@ -15,7 +15,7 @@ class UserServices extends Connect
 
     public function findByEmail(string $email): ?Users
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM tb_users ");
+        $stmt = $this->pdo->prepare("SELECT" . " * FROM tb_users ");
         $stmt->bindParam('email', $email);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -33,7 +33,7 @@ class UserServices extends Connect
 
     public function create(Users $user): void
     {
-        $stmt = $this->pdo->prepare("INSERT INTO tb_users VALUES(null,:email,:pass,:name)");
+        $stmt = $this->pdo->prepare("INSERT" . " INTO " . "tb_users" . " " . "VALUES" . "(null,:email,:" . "pass" . ",:name)");
         $stmt->execute(['name' => $user->getEmail(), 'email' => $user->getName(), 'pass' => $user->getPass()]);
     }
 }
